@@ -2,14 +2,19 @@
     width: 100%;
     height: 1rem;
     background-color: red;
+    text-align: center;
+    font-size: 0.5rem;
+    line-height: 1rem;
 }
 .main{
     width: 100%;
+    height: 6rem;
 }
 .main ul{
     list-style: none;
     padding: 0px;
     margin: 0px;
+    height: 100%;
 }
 .main ul li{
     float: left;
@@ -21,5 +26,12 @@
 }
 
 .bottom{
+    width: 100%;
+    height: 1rem;
+    line-height: 0.6rem;
+    text-align: center;
+}
 
+.bottom button{
+    font-size: 0.5rem;
 }
