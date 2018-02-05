@@ -27,4 +27,20 @@ $(function () {
 
     })
 
+    //图片拖动
+    /*$('.main ul li').on('click',function () {
+        $(this).css('backgroundColor','#f00');
+        console.log('click');
+    }).on('mousedown',function () {
+        console.log('down');
+    }).on('mouseup',function () {
+        console.log('up');
+        $(this).css('backgroundColor','#0f0');
+    })*/
+    $('.main ul li').mousedown(function (e) {
+        console.log('click');
+        console.log('down==='+e.pageX);
+    }).mouseup(function (e) {
+        console.log('up==='+e.pageX);
+    })
 })
