@@ -10,17 +10,17 @@
     font-size: 0.5rem;
     line-height: 1rem;
 }
-.main{
+#main{
     width: 100%;
     height: 6rem;
 }
-.main ul{
+#main ul{
     list-style: none;
     padding: 0px;
     margin: 0px;
     height: 100%;
 }
-.main ul li{
+#main ul li{
     float: left;
     width: 33%;
     height: 1.8rem;

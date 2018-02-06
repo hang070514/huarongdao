@@ -27,20 +27,42 @@ $(function () {
 
     })
 
-    //图片拖动
-    /*$('.main ul li').on('click',function () {
-        $(this).css('backgroundColor','#f00');
-        console.log('click');
-    }).on('mousedown',function () {
-        console.log('down');
-    }).on('mouseup',function () {
-        console.log('up');
-        $(this).css('backgroundColor','#0f0');
-    })*/
-    $('.main ul li').mousedown(function (e) {
-        console.log('click');
-        console.log('down==='+e.pageX);
-    }).mouseup(function (e) {
-        console.log('up==='+e.pageX);
-    })
+    var main = document.getElementById('main');
+    var li = document.getElementsByTagName('li');
+
+    main.addEventListener('touchstart',function (event) {
+        console.log(this.getElementsByTagName('img')[0].getAttribute('src'));
+    },false)
+ /*   for(var i = 0; i < li.length; i++){
+        //var ind = this.i;
+        //console.log(i);
+        li[i].addEventListener('touchstart',function (event) {
+            //console.log(this.getElementsByTagName('img')[0].getAttribute('src'));
+           /!* console.log(this.getElementsByTagName('img')[0].offsetWidth);
+            console.log(this.offsetWidth);*!/
+            console.log(this.getElementsByTagName('img')[0].offsetLeft);
+            console.log(this.offsetLeft);
+           // console.log(this.getElementsByTagName('img')[0].getAttribute('src'));
+            console.log(parseInt(event.touches[0].clientX));
+            console.log(parseInt(event.touches[0].clientY));
+
+            console.log(event.touches[0].target);
+        },false);
+
+        li[i].addEventListener('touchmove',function (event) {
+            console.log(this.getElementsByTagName('img')[0].getAttribute('src'));
+            console.log('moveX====='+parseInt(event.targetTouches[0].clientX));
+            console.log('moveY====='+parseInt(event.targetTouches[0].clientY));
+            console.log(event.targetTouches[0].target);
+        },false);
+
+        li[i].addEventListener('touchend',function (event) {
+            console.log(this.getElementsByTagName('img')[0].getAttribute('src'));
+            //console.log(parseInt(event.changedTouches[0].clientX));
+            //console.log(parseInt(event.changedTouches[0].clientY));
+            //console.log(event.touches[0].target);
+        },false);
+    }*/
+
+
 })
