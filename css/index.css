@@ -15,18 +15,25 @@
     height: 6rem;
 }
 #main ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     list-style: none;
-    padding: 0px;
-    margin: 0px;
+    margin: 10px auto;
     height: 100%;
+    width: 80vw;
 }
 #main ul li{
     float: left;
-    width: 33%;
+    width: 1.8rem;
     height: 1.8rem;
     line-height: 1.8rem;
     text-align: center;
     border: 1px solid blue;
+}
+
+#main ul li:last-child{
+    border: 0px solid transparent;
 }
 
 .bottom{

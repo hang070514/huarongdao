@@ -5,7 +5,7 @@ $(function () {
     $('.bottom button').on('click',function () {
         $(this).text('游戏中');
         console.log('点击');
-
+        //计时
         timer = setInterval(function () {
             sec++;
             console.log('sec===='+sec);
@@ -25,6 +25,28 @@ $(function () {
             }
         },1000);
 
+    })
+    //存放数字的数组
+    var numArr = [1,2,3,4,5,6,7,8];
+    //将数组顺序打乱
+    function disOrder(arr) {
+        var n = arr.length;
+        for(var i = 0; i < n; i++){
+            exchange(arr,i,parseInt(Math.random()*n))
+        }
+    }
+
+    function exchange(arr,start,index) {
+        var temp;
+        temp = arr[start];
+        arr[start] = arr[index];
+        arr[index] = temp;
+    }
+    disOrder(numArr);
+
+    numArr.forEach(function (value,index) {
+        console.log(value);
+        $('#main li').eq(index).html(value);
     })
 
     var main = document.getElementById('main');
